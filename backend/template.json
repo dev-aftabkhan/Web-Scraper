@@ -1,0 +1,48 @@
+[
+  {
+    "name": "jobTitle",
+    "selector": ".cust-job-tuple h2 a.title",
+    "attribute": "text"
+  },
+  {
+    "name": "jobLink",
+    "selector": ".cust-job-tuple h2 a.title",
+    "attribute": "href"
+  },
+  {
+    "name": "companyName",
+    "selector": ".cust-job-tuple .comp-name",
+    "attribute": "text"
+  },
+  {
+    "name": "location",
+    "selector": ".cust-job-tuple .locWdth",
+    "attribute": "text"
+  },
+  {
+    "name": "experience",
+    "selector": ".cust-job-tuple .expwdth",
+    "attribute": "text"
+  },
+  {
+    "name": "salary",
+    "selector": ".cust-job-tuple .sal",
+    "attribute": "text"
+  },
+  {
+    "name": "description",
+    "selector": ".cust-job-tuple .job-desc",
+    "attribute": "text"
+  },
+  {
+    "name": "tags",
+    "selector": ".cust-job-tuple .tags-gt li",
+    "attribute": "text",
+    "multiple": true
+  },
+  {
+    "name": "postedDate",
+    "selector": ".cust-job-tuple .job-post-day",
+    "attribute": "text"
+  }
+]

@@ -1,48 +1,62 @@
 [
   {
-    "name": "jobTitle",
-    "selector": ".cust-job-tuple h2 a.title",
+    "name": "Job Title",
+    "selector": ".title",
     "attribute": "text"
   },
   {
-    "name": "jobLink",
-    "selector": ".cust-job-tuple h2 a.title",
+    "name": "Job URL",
+    "selector": ".title",
     "attribute": "href"
   },
   {
-    "name": "companyName",
-    "selector": ".cust-job-tuple .comp-name",
+    "name": "Company",
+    "selector": ".comp-name",
     "attribute": "text"
   },
   {
-    "name": "location",
-    "selector": ".cust-job-tuple .locWdth",
+    "name": "Company URL",
+    "selector": ".comp-name",
+    "attribute": "href"
+  },
+  {
+    "name": "Company Rating",
+    "selector": ".main-2",
     "attribute": "text"
   },
   {
-    "name": "experience",
-    "selector": ".cust-job-tuple .expwdth",
+    "name": "Company Reviews",
+    "selector": ".review",
     "attribute": "text"
   },
   {
-    "name": "salary",
-    "selector": ".cust-job-tuple .sal",
+    "name": "Experience",
+    "selector": ".expwdth",
     "attribute": "text"
   },
   {
-    "name": "description",
-    "selector": ".cust-job-tuple .job-desc",
+    "name": "Salary",
+    "selector": ".sal-wrap span:last-child",
     "attribute": "text"
   },
   {
-    "name": "tags",
-    "selector": ".cust-job-tuple .tags-gt li",
-    "attribute": "text",
-    "multiple": true
+    "name": "Location",
+    "selector": ".locWdth",
+    "attribute": "text"
   },
   {
-    "name": "postedDate",
-    "selector": ".cust-job-tuple .job-post-day",
+    "name": "Job Description",
+    "selector": ".job-desc",
+    "attribute": "text"
+  },
+  {
+    "name": "Job Posted",
+    "selector": ".job-post-day",
+    "attribute": "text"
+  },
+  {
+    "name": "Tags",
+    "selector": ".tags-gt li",
     "attribute": "text"
   }
 ]

@@ -1,31 +1,26 @@
-const fs = require('fs');
-const path = require('path');
 const { scrapePage } = require('../services/scraper.service');
+const { loadTemplate } = require('../utils/templateLoader');
 
-const TEMPLATE_PATH = path.resolve(__dirname, '../template.json');
-const template = JSON.parse(fs.readFileSync(TEMPLATE_PATH, 'utf-8'));
-
-const scrapeHandler = async (req, res) => {
+async function scrapeUrls(req, res) {
   const { urls } = req.body;
-  if (!Array.isArray(urls)) {
-    return res.status(400).json({ error: 'URLs must be an array.' });
+  if (!urls || !Array.isArray(urls) || urls.length === 0) {
+    return res.status(400).json({ error: 'Please provide an array of URLs in the request body.' });
   }
 
-  const results = [];
-  for (const url of urls) {
-    const result = await scrapePage(url, template);
-    results.push(result);
+  try {
+    const template = loadTemplate();
+    const results = [];
+
+    for (const url of urls) {
+      console.log(`Scraping: ${url}`);
+      const result = await scrapePage(url, template);
+      results.push(result);
+    }
+
+    res.json({ results });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Error during scraping.' });
   }
+}
 
-  // Save to file as well
-  fs.writeFileSync(
-    path.resolve(__dirname, '../scraped_data.json'),
-    JSON.stringify(results, null, 2)
-  );
-
-  res.status(200).json(results);
-};
-
-module.exports = {
-  scrapeHandler
-};
+module.exports = { scrapeUrls };

@@ -19,6 +19,7 @@ async function convertFromBody(req, res) {
 
   try {
     const json = await convertHTMLtoJSON(html);
+    fs.writeFileSync("template.json", JSON.stringify(json, null, 2));
     res.json({ success: true, json });
   } catch (error) {
     res.status(500).json({ error: error.message || "Conversion failed" });

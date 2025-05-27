@@ -1,62 +1,57 @@
 [
   {
     "name": "Job Title",
-    "selector": ".title",
+    "selector": ".JobItemV2 .f16 a",
     "attribute": "text"
   },
   {
     "name": "Job URL",
-    "selector": ".title",
+    "selector": ".JobItemV2 .f16 a",
     "attribute": "href"
-  },
-  {
-    "name": "Company",
-    "selector": ".comp-name",
-    "attribute": "text"
-  },
-  {
-    "name": "Company URL",
-    "selector": ".comp-name",
-    "attribute": "href"
-  },
-  {
-    "name": "Company Rating",
-    "selector": ".main-2",
-    "attribute": "text"
-  },
-  {
-    "name": "Company Reviews",
-    "selector": ".review",
-    "attribute": "text"
-  },
-  {
-    "name": "Experience",
-    "selector": ".expwdth",
-    "attribute": "text"
   },
   {
     "name": "Salary",
-    "selector": ".sal-wrap span:last-child",
+    "selector": ".JobItemV2 .f14",
     "attribute": "text"
   },
   {
     "name": "Location",
-    "selector": ".locWdth",
+    "selector": ".JobItemV2 .LocationDetail",
     "attribute": "text"
   },
   {
-    "name": "Job Description",
-    "selector": ".job-desc",
+    "name": "Job Type",
+    "selector": ".JobItemV2 .JobTypeDetail",
     "attribute": "text"
   },
   {
-    "name": "Job Posted",
-    "selector": ".job-post-day",
+    "name": "Experience",
+    "selector": ".JobItemV2 .ExperienceDetail",
     "attribute": "text"
   },
   {
-    "name": "Tags",
-    "selector": ".tags-gt li",
+    "name": "English Required",
+    "selector": ".JobItemV2 .EnglishDetail",
+    "attribute": "text"
+  },
+  {
+    "name": "Company",
+    "selector": ".JobItemV2 .CompanyDetail",
+    "attribute": "text"
+  },
+  {
+    "name": "Qualification",
+    "selector": ".JobItemV2 .QualificationDetail",
+    "attribute": "text"
+  },
+  {
+    "name": "Posted On",
+    "selector": ".JobItemV2 .JobPostedOnDetail",
+    "attribute": "text"
+  },
+  {
+    "name": "Job Views",
+    "selector": ".JobItemV2 .JobViews span",
     "attribute": "text"
   }
 ]
